@@ -42,6 +42,13 @@ section{
     padding: 80px var(--margen-lateral);
 }
 
+section h2{
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;
+    color: var(--texto-principal);
+    margin-bottom: 48px;
+}
+
 #nav-principal{
     position: sticky;
     top: 0;
@@ -191,4 +198,215 @@ section{
 
 #inicio .boton-primario{
     animation-delay: 0.6s;
+}
+
+.grid-proyectos{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.tarjeta{
+    background-color: var(--bg-tarjeta);
+    border-radius: 12px;
+    border: 1px solid var(--borde-sutil);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease;
+}
+
+.tarjeta:hover{
+    transform: translateY(-8px);
+    border:1px solid var(--arena-primario) ;
+}
+
+.stack-tags{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.chip{
+    font-size: 0.8rem;
+    color: var(--arena-primario);
+    background-color: var(--bg-superficie);
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--borde-sutil);
+}
+
+.acciones-tarjeta{
+    margin-top: auto;
+    display: flex;
+    gap: 12px;
+}
+
+.boton-secundario{
+    color: var(--arena-primario);
+    text-decoration: none;
+    font-family: var(--fuente-codigo);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+.boton-secundario:hover{
+    color: var(--texto-principal);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.grid-stack{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+}
+
+.categoria-stack{
+    background-color: var(--bg-superficie);
+    border: 1px solid var(--borde-sutil);
+    border-radius: 12px;
+    padding: 24px;
+    transition: 0.3s ease;
+}
+
+.categoria-stack:hover{
+    border-color: var(--arena-primario);
+    box-shadow: 0 4px 20px rgba(194, 178, 128, 0.1);
+}
+
+.categoria-stack h3{
+    font-family: var(--fuente-codigo);
+    font-size: 1.2rem;
+    color: var(--texto-principal);
+    margin-bottom: 20px;
+}
+
+.grid-contacto{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+}
+
+@media(max-width:768px){
+    .grid-contacto{
+        grid-template-columns: 1fr;
+    }
+}
+
+.panel-formulario, .panel-info{
+    background-color: var(--bg-superficie);
+    border-radius: 12px;
+    padding: 32px;
+}
+
+.panel-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.grupo-input input, .grupo-input select, .grupo-input textarea{
+    width: 100%;
+    background-color: var(--bg-fondo);
+    border: 1px solid var(--borde-sutil);
+    color: var(--texto-principal);
+    font-family: var(--fuente-codigo);
+    padding: 12px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+    border-color: var(--arena-primario);
+}
+
+.grupo-input label{
+    display: block;
+    font-size: 0.85rem;
+    color: var(--arena-primario);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.pie-formulario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.info-encriptacion{
+    font-family: var(--fuente-codigo);
+    font-size: 0.8rem;
+    color: var(--texto-secundario);
+}
+
+#contacto button{
+    border: none;
+    padding: 12px 24px;
+    color: var(--bg-fondo);
+    background-color: var(--arena-primario);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#contacto button:hover{
+    background-color: var(--arena-hover);
+}
+
+.label-info{
+    font-family: var(--fuente-codigo);
+    color: var(--arena-primario);
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+}
+
+.label-info::after{
+    content: '_';
+    animation: parpadeo-consola 1s step-end infinite;
+}
+
+.lista-enlaces{
+    display: flex;
+    gap: 24px;
+}
+
+.enlace-protocolo img{
+    width: 40px;
+    height: auto;
+    margin-top: 10px;
+    transition: 0.3s ease;
+    opacity: 0.7;
+    filter: invert(1);
+}
+
+.enlace-protocolo:hover img{
+    transform: scale(1.15);
+    opacity: 1;
+    filter: invert(1) drop-shadow(0 0 8px var(--arena-primario));
+}
+
+.p-contacto{
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+.status-panel{
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    gap: 8px;
+}
+
+.status-panel span{
+    font-family: var(--fuente-codigo);
+    font-size: 0.85rem;
+    color: var(--texto-secundario);
+    padding-left: 8px;
 }
