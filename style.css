@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Hanken+Grotesk:wght@500;600;700&display=swap');
+
+:root{
+    --bg-fondo: #0e1320;
+    --bg-superficie: #1a1f2c;
+    --bg-tarjeta: #252a37;
+    --texto-principal: #dee2f4;
+    --texto-secundario: #cdc6b7;
+
+    --arena-primario: #c2b280;
+    --arena-hover: #d6c692;
+    --borde-sutil: #303442;
+
+    --fuente-titulos: 'Hanken Grotesk', sans-serif;
+    --fuente-codigo:'Geist Mono', monospace;
+
+    --max-width:1280px;
+    --margen-lateral:32px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--bg-fondo);
+    color: var(--texto-principal);
+    font-family: var(--fuente-codigo);
+    line-height: 1.6;
+    -webkit-font-smoothing:antialiased;
+}
+
+section{
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 80px var(--margen-lateral);
+}
+
+#nav-principal{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--bg-superficie);
+    border-bottom:1px solid var(--borde-sutil) ;
+    z-index: 100;
+}
+
+#nav{
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 20px var(--margen-lateral);
+    display: flex;
+    justify-content: space-evenly;
+    gap: var(--margen-lateral);
+}
+
+#nav a{
+    text-decoration: none;
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    transition:0.3s ease;
+}
+
+#nav a:hover{
+    transform: scale(1.2);
+    color: var(--arena-primario);
+}
+
+#inicio{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.inicio-texto{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.inicio-visual{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
+    animation: aparecerArriba 0.8s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.foto-perfil{
+    max-width: 450px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--borde-sutil);
+
+    filter: grayscale(100%) contrast(1.1);
+    transition: all 0.4s ease;
+}
+
+.foto-perfil:hover{
+    filter: grayscale(0%) contrast(1);
+    border-color: var(--arena-primario);
+    box-shadow: 0 10px 30px rgba(194, 178, 128, 0.1);
+}
+
+#label-sec{
+    color: var(--arena-primario);
+    font-family: var(--fuente-codigo);
+    letter-spacing: 2px;
+    
+}
+
+#inicio h1{
+    font-family: var(--fuente-titulos);
+    color: var(--texto-principal);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-top: 24px;
+}
+
+#inicio p{
+    max-width: 600px;
+    color: var(--texto-secundario);
+    font-size: 1.1rem;
+    margin-top: 24px;
+}
+
+.boton-primario{
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--arena-primario);
+    color: var(--bg-fondo);
+    text-decoration:none;
+    font-weight: bold;
+    border-radius: 8px;
+    width: fit-content;
+    transition: 0.3s ease;
+    margin-top: 24px;
+}
+
+.boton-primario:hover{
+    background-color: var(--arena-hover);
+}
+
+#label-sec::after{
+    content: '_';
+    animation: parpadeo-consola 1s step-end infinite;
+}
+
+@keyframes parpadeo-consola{
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0;}
+}
+
+@keyframes aparecerArriba{
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#inicio h1,
+#inicio p,
+#inicio .boton-primario{
+    opacity: 0;
+    animation: aparecerArriba 0.8s ease forwards;
+}
+
+#inicio h1{
+    animation-delay: 0.2s;
+}
+
+#inicio p{
+    animation-delay: 0.4s;
+}
+
+#inicio .boton-primario{
+    animation-delay: 0.6s;
+}

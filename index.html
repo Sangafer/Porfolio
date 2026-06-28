@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Porfolio Ignacio Sanchez</title>
+</head>
+<body>
+    <div id="nav-principal">
+        <nav id="nav">
+            <a href="#inicio">INICIO</a>
+            <a href="#proyectos">PROYECTOS</a>
+            <a href="#stack">STACK</a>
+            <a href="#contacto">CONTACTO</a>
+        </nav>
+    </div>
+    <section id="inicio">
+        <div class="inicio-texto">
+            <span id="label-sec">>>Ingeniería Informática</span>
+            <h1>Hola, soy Ignacio Sánchez, un gusto.</h1>
+            <p>Soy estudiante de Ing. Informática en la Universidad Nebrija en Madrid. Estoy interesado en 
+            el desarrollo del full stack, desde el diseño de una página web hasta su creación. 
+            Disfruto traduciendo lógica compleja en código limpio y estructurado
+            </p>
+            <a href="#proyectos" class="boton-primario">Ver proyectos</a>
+        </div>
+        <div class="inicio-visual">
+            <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Ignacio" alt="Avatar de Ignacio Sánchez" class="foto-perfil">        
+        </div>
+    </section>
+    <section id="proyectos">
+        <h2>Proyectos</h2>
+        <div class="grid-proyectos">
+            <div class="tarjeta">
+                <h3>Descargador de Youtube</h3>
+                <div class="stack-tags">
+                    <span class="chip">PYTHON</span>
+                    <span class="chip">FLASK</span>
+                    <span class="chip">YT-DLP</span>
+                </div>
+                <p>Desarrollo de una herrmieneta web enfocada en el backend para el procesamiento de URLs y la descarga automatizada de contenido multimedia desde servidores</p>
+                <div class="acciones-tarjeta">
+                    <a href="#" class="boton-secundario">Ver repositorio</a>
+                </div>
+            </div>
+            <div class="tarjeta">
+                <h3>Weather dashboard</h3>
+                <div class="stack-tags">
+                    <span class="chip">JAVASCRIPT</span>
+                    <span class="chip">API REST</span>
+                    <span class="chip">CSS</span>
+                </div>
+                <p>Aplicación web para la predicción del tiempo según tu ubicación, además de poder buscar cualquier ciudad del mundo</p>
+                <div class="acciones-tarjeta">
+                    <a href="#" class="boton-secundario">Ver repositorio</a>
+                    <a href="#" class="boton-secundario">Ver demo</a>
+                </div>
+            </div>
+            <div class="tarjeta">
+                <h3>Reproductor de vinilos</h3>
+                <div class="stack-tags">
+                    <span class="chip">HTML</span>
+                    <span class="chip">ANIMACIONES EN CSS</span>
+                    <span class="chip">USO DE IMAGENES Y AUDIO</span>
+                </div>
+                <p>Aplicación sencilla que imita la reproducción de vinilos con sonido y animaciones imitadoras</p>
+                <div class="acciones-tarjeta">
+                    <a href="#" class="boton"-secundario>Ver repositorio</a>
+                </div>
+            </div>
+            <div class="tarjeta">
+                <h3>Naipo</h3>
+                <div class="stack-tags">
+                    <span class="chip">Python</span>
+                    <span class="chip">JSON</span>
+                    <span class="chip">POO</span>
+                </div>
+                <p>Proyecto de 5 amigos que crearon un juego desde cero con mecánicas parecidas al juego <i>Balatro</i></p>
+                <div class="acciones-tarjeta">
+                    <a href="#" class="boton-secundario">Ver repositorio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="stack">
+        <h2>Stack Tecnologico</h2>
+        <div class="grid-stack">
+            <div class="categoria-stack">
+                <h3>Lenguajes</h3>
+                <div class="stack-tags">
+                    <span class="chip">PYTHON</span>
+                    <span class="chip">C++</span>
+                    <span class="chip">JAVASCRIPT</span>
+                    <span class="chip">MySQL</span>
+                </div>
+            </div>
+            <div class="categoria-stack">
+                <h3>Frontend</h3>
+                <div class="stack-tags">
+                    <span class="chip">HTML</span>
+                    <span class="chip">CSS</span>
+                    <span class="chip">JSON</span>
+                </div>
+            </div>
+            <div class="categoria-stack">
+                <h3>Backend y Herramientas</h3>
+                <div class="stack-tags">
+                    <span class="chip">FLASK</span>
+                    <span class="chip">API REST</span>
+                    <span class="chip">GIT</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacto">
+        <div class="cabecera-contacto">
+         <h2>Contacto</h2>
+         <p>Si tienes algo en mente como una propuesta laboral o simplemente hablar de mi codigo, no dudes en contactarme</p>
+        </div>
+         <div class="grid-contacto">
+            <div class="panel-formulario">
+                <h3>¡Enviame un mensaje!</h3>
+                <form action="https://formsubmit.co/sngafer@gmail.com" method="post">
+                    <input type="hidden" name="_captcha" value="false">
+                    <div class="fila-inputs">
+                        <div class="grupo-input">
+                            <label>NOMBRE</label>
+                            <input type="text" name="nombre" placeholder="p. ej. Jon Doe" required>
+                        </div>
+                        <div class="grupo-input">
+                            <label>EMAIL</label>
+                            <input type="email" name="email" placeholder="jondoe@example.com" required>
+                        </div>
+                        <div class="grupo-input">
+                            <label>ASUNTO</label>
+                            <select name="asunto" required>
+                                <option value="Consulta Tecnica">Consulta tecnica</option>
+                                <option value="Oportunidad laboral">Oportunidad Laboral</option>
+                                <option value="Colaboracion">Colaboracion</option>
+                            </select>
+                        </div>
+                        <div class="grupo-input">
+                            <label>MENSAJE</label>
+                            <textarea name="mensaje" placeholder="Cuentame un poco más..." rows="6" required></textarea>
+                        </div>
+                        <div class="pie-formulario">
+                            <span class="info-encriptacion"> Encriptacion: AES-256 activada</span>
+                            <button type="submit" class="boton-primario">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="panel-info">
+                <div class="tarjeta-info">
+                    <span class="label-info">>SOCIAL PROTOCOL</span>
+                    <div class="lista-enlaces">
+                        <a href="https://github.com/Sangafer" target="_blank" rel="noopener noreferrer" class="enlace-protocolo">GitHub</a>
+                        <a href="mailto:sngafer@gmail.com" class="enlace-protocolo">Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
