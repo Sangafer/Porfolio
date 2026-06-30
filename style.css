@@ -410,3 +410,14 @@ input:focus, textarea:focus, select:focus{
     color: var(--texto-secundario);
     padding-left: 8px;
 }
+
+.tarjeta, .categoria-stack{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease-out;
+}
+
+.tarjeta.visible, .categoria-stack.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
