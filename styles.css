@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Design System Tokens & Base Setup — iOS Liquid Glass
+   ========================================================================== */
+
+:root {
+  /* Fondo Base */
+  --bg-center: #3D2B6E;
+  --bg-transition: #1A1F3C;
+  --bg-outer: #120E24;
+  --bg-radial: radial-gradient(circle at 20% 20%, #3D2B6E 0%, #1A1F3C 45%, #120E24 100%);
+
+  /* Blobs de Aurora */
+  --blob-a-color: #5E9EFF;
+  --blob-b-color: #B983FF;
+
+  /* Superficies de Cristal (Liquid Glass) */
+  --glass-bg: linear-gradient(160deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.05) 100%);
+  --glass-bg-hover: linear-gradient(160deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.08) 100%);
+  --glass-blur: 24px;
+  --glass-border: 1px solid rgba(255, 255, 255, 0.25);
+  --glass-border-top: 1px solid rgba(255, 255, 255, 0.45);
+  --glass-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  --glass-inset: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  /* Radios de Esquina */
+  --radius-card: 18px;
+  --radius-pill: 24px;
+
+  /* Acentos y Botones */
+  --accent-primary: #5E9EFF;
+  --accent-secondary: #B983FF;
+  --cta-gradient: linear-gradient(160deg, #7CB4FF, #5E9EFF);
+  --cta-shadow: 0 4px 12px rgba(94, 158, 255, 0.4);
+  --cta-shadow-hover: 0 6px 20px rgba(94, 158, 255, 0.6);
+
+  /* Tipografía */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* Colores de Texto */
+  --text-main: #F5F5F7;
+  --text-muted: rgba(245, 245, 247, 0.65);
+  --badge-blue-text: #A8CDFF;
+  --badge-purple-text: #E0C4FF;
+}
+
+/* ==========================================================================
+   Reset Universal & Box Sizing
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   Estilos Base del Body
+   ========================================================================== */
+
+body {
+  min-height: 100vh;
+  background: var(--bg-radial);
+  background-attachment: fixed;
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
